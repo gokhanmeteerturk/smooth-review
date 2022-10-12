@@ -17,6 +17,6 @@ from django.contrib import admin
 from django.urls import include, path
 
 urlpatterns = [
-    path('smoothapp/', include('smoothapp.urls')),
-    path('admin/', admin.site.urls),
+    path('', include('smoothapp.urls')),
+    path('yonet/', admin.site.urls),
 ]
