@@ -145,4 +145,13 @@ try:
     from .settings_local import *
 except ImportError:
     pass
+
+try:
+    # noinspection PyUnresolvedReferences
+    MIDDLEWARE_LOCAL
+except NameError:
+    MIDDLEWARE_LOCAL = []
+
+MIDDLEWARE = MIDDLEWARE + MIDDLEWARE_LOCAL
+
 STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
