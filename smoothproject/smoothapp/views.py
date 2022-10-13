@@ -14,9 +14,11 @@ def index(request):
 class ReviewSubmissionView(FormView):
     template_name = 'index.html'
     form_class = UploadReviewSubmissionForm
-    success_url = '/'
 
     def form_valid(self, form):
         form.save()
         print(form.cleaned_data)
         return super().form_valid(form)
+
+    def form_invalid(self, form):
+        return super().form_invalid(form)
