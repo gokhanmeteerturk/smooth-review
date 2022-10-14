@@ -11,7 +11,7 @@ DATABASES = {
     }
 }
 SECRET_KEY = '...............'
-SECRET_KEY_FALLBACKS = ['django-insecure-pxl)3hru*t)3$+6(=l)e0y0rdfa@zfmeduk@d8f--dmfx53oaa']
+SECRET_KEY_FALLBACKS = []
 DEVELOPMENT = True
 
 
