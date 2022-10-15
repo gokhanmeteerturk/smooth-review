@@ -1,0 +1,32 @@
+<form method="post">
+  {% csrf_token %}
+  <div class="mb-3 text-end mt-3">
+    <label for="id_username" class="form-label text-white fs-5 fw-light">Username</label>
+    <div class="text-start">
+      <input type="text" name="username" class="form-control" autofocus="" autocapitalize="none" autocomplete="username" maxlength="150" required="" id="id_username" data-scan="pc">
+    </div>
+  </div>
+  <div class="mb-3 text-end">
+    <label for="id_email" class="form-label text-white fs-5 fw-light">E-mail</label>
+    <div class="text-start">
+      <input type="email" name="email" class="form-control" autofocus="" autocapitalize="none" autocomplete="email" maxlength="150" required="" id="id_email" data-scan="pc">
+    </div>
+  </div>
+  <div class="mb-3 text-end">
+    <label for="id_password" class="form-label text-white fs-5 fw-light">Password</label>
+    <div class="text-start">
+      <input type="password" name="password" class="form-control" autocomplete="current-password" required="" id="id_password">
+    </div>
+  </div>
+<!--  {{ form.as_p }}-->
+  <div class="row">
+    <div class="col-6 text-start">
+      <a href="{% url 'login' %}" class="fs-5 mt-2 text-decoration-none d-block text-start text-white ms-1">or <span class="text-decoration-underline">log in</span></a>
+    </div>
+    <div class="col-6 text-end">
+      <button class="btn btn-lg btn-secondary mb-4 text-end" type="submit">REGISTER</button>
+    </div>
+  </div>
+
+
+</form>

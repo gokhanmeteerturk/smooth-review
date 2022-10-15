@@ -15,6 +15,10 @@
 
 body {
     background-color: #f2f2fe;
+    font-family: 'Roboto', sans-serif;
+}
+a, span, h1, h2, h3, h4, h5, h6, p, div{
+    font-family: 'Roboto', sans-serif;
 }
 .maxw-500{
 max-width:500px;
@@ -31,4 +35,11 @@ input:-webkit-autofill:focus {
 }
 input[data-autocompleted] {
     background-color: transparent !important;
+}
+.btn-secondary{
+background-color: #f2557a;
+border-color: #f2557a;
+}
+.text-secondary{
+    color:#f2557a;
 }

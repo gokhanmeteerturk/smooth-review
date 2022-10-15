@@ -13,7 +13,7 @@ def index(request):
 
 
 class IndexView(View):
-    template_name = 'index.html'
+    template_name = 'index/index.html'
 
     def get(self, request, *args, **kwargs):
         context_data = {
