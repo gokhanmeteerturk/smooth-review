@@ -2,6 +2,19 @@
     {% block title %}{% if title %}{{title}}{% else %}Smooth Reviews{% endif %}{% endblock %}
     {% block content %}
 
+    <div class="nav">
+
+        {% if user.is_authenticated %}
+            <p> {{ request.user }} </p>
+            <a href="{% url 'logout' %}">Logout</a>
+            <!-- You can also access the user data like this -->
+        {% else %}
+            <a href="{% url 'login' %}">Login</a>
+        {% endif %}
+
+
+    </div>
+
     <div class="container-xl">
 
         <div class="container-fluid text-center">
