@@ -21,6 +21,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('', include('smoothapp.urls')),
     path('yonet/', admin.site.urls),
+    path('accounts/', include('django.contrib.auth.urls')),
 
 ]
 

@@ -1,0 +1,21 @@
+{% extends "base-wrapper-single-row.html" %}
+{% block simple-content %}
+<h2>Log In</h2>
+<form method="post">
+  {% csrf_token %}
+  <div class="mb-3 row">
+    <label for="id_username" class="col-sm-2 col-form-label">Username</label>
+    <div class="col-sm-10">
+      <input type="text" name="username" class="form-control" autofocus="" autocapitalize="none" autocomplete="username" maxlength="150" required="" id="id_username" data-scan="pc">
+    </div>
+  </div>
+  <div class="mb-3 row">
+    <label for="id_password" class="col-sm-2 col-form-label">Password</label>
+    <div class="col-sm-10">
+      <input type="password" name="password" class="form-control" autocomplete="current-password" required="" id="id_password">
+    </div>
+  </div>
+<!--  {{ form.as_p }}-->
+<button class="btn btn-primary" type="submit">LOG IN</button>
+</form>
+{% endblock %}

@@ -16,3 +16,14 @@
 body {
     background-color: #f2f2fe;
 }
+
+input[type="text"], input[type="password"]{
+    background-color: #e7fef1 !important;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+    transition: background-color 600000s 0s, color 600000s 0s;
+}
+input[data-autocompleted] {
+    background-color: transparent !important;
+}
