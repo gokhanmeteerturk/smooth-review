@@ -112,6 +112,14 @@ USE_I18N = True
 
 USE_TZ = True
 
+''' USE SETTINGS_LOCAL FOR THESE:
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'email-smtp.us-east-1.amazonaws.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'my_smtp_username'
+EMAIL_HOST_PASSWORD = 'my_smtp_password'
+EMAIL_USE_TLS = True
+'''
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
