@@ -2,37 +2,27 @@
     {% block title %}{% if title %}{{title}}{% else %}Smooth Reviews{% endif %}{% endblock %}
     {% block content %}
 
-    <div class="nav">
-
-        {% if user.is_authenticated %}
-            <p> {{ request.user }} </p>
-            <a href="{% url 'logout' %}">Logout</a>
-            <!-- You can also access the user data like this -->
-        {% else %}
-            <a href="{% url 'login' %}">Login</a>
-        {% endif %}
-
-
-    </div>
-
     <div class="container-xl">
 
         <div class="container-fluid text-center">
           <div class="row">
-            <div class="col-12 col-md-7 col-lg-8 text-start">
+            <div class="col-12 col-md-7 col-lg-8 text-start pt-3">
                 {% include "index/parts/landing_content.html" %}
             </div>
-            <div class="col-12 col-md-5 col-lg-4 order-md-last bg-primary">
+            <div class="col-12 col-md-5 col-lg-4 order-md-last bg-primary pt-3">
               {% include "index/parts/register_form.html" %}
             </div>
           </div>
           <div class="row">
-            <div class="col-12 col-md-6">
-              1
+            <div class="col-12 mt-4">
+
+                {% include "index/parts/faq.html" %}
+
+
             </div>
-            <div class="col-12 col-md-6">
-              2
-            </div>
+          </div>
+          <div class="row">
+              {% include "index/parts/share.html" %}
           </div>
         </div>
 
