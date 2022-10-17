@@ -1,4 +1,4 @@
-<form method="post">
+<form method="post" autocomplete="off">
   <h2 class="text-white fw-light">Register Now</h2>
   {% csrf_token %}
   <div class="mb-3 text-end mt-3">
@@ -19,7 +19,6 @@
       <input type="password" name="password" class="form-control" autocomplete="current-password" required="" id="id_password">
     </div>
   </div>
-<!--  {{ form.as_p }}-->
   <div class="row">
     <div class="col-6 text-start">
       <a href="{% url 'login' %}" class="fs-5 mt-2 text-decoration-none d-block text-start text-white ms-1">or <span class="text-decoration-underline">log in</span></a>

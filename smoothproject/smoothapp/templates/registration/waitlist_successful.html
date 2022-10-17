@@ -1,0 +1,10 @@
+{% extends "base_wrapper_single_row.html" %}
+{% load custom_tags %}
+{% block title %}Smooth Reviews - successful{% endblock %}
+{% block simple-content %}
+  <h1 class="m-4 fs-4"><a href="/">{% get_setting "SITENAME_PRETTY" %}</a></h1>
+  <h2 class="m-4">You are added to the waitlist!</h2>
+  <p>We will notify you when the website is ready.<br>
+    <a href="{% url 'index' %}" class="btn btn-primary fs-5 mt-4">Go back</a>
+  </p>
+{% endblock %}

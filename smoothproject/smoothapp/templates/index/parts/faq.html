@@ -6,6 +6,7 @@
         <a class="list-group-item list-group-item-action" href="#list-item-2">Does this violate developer policies?</a>
         <a class="list-group-item list-group-item-action" href="#list-item-3">Can I add my paid apps?</a>
         <a class="list-group-item list-group-item-action" href="#list-item-4">Which markets are allowed?</a>
+        <a class="list-group-item list-group-item-action" href="#list-item-5">Is this the original Smooth Reviews?</a>
       </div>
     </div>
     <div class="col-12 col-md-8 bg-secondary text-white">
@@ -13,7 +14,7 @@
 
         <span id="list-item-1">&nbsp;</span>
         <h4>How it works?</h4>
-        <p>
+        <p class="me-4">
           You submit a review, you get a review.
           Just log in on {% get_setting "SITENAME_PRETTY" %} with your mobile device and
           we will provide you with apps to review.
@@ -25,15 +26,17 @@
 <br><br>
         <span id="list-item-2">&nbsp;</span>
         <h4>Does this violate developer policies?</h4>
-        <p>
-          {% get_setting "SITENAME_PRETTY" %} is just a way to show your app to other developers and give each other honest feedback.
+        <p class="me-4">
+          {% get_setting "SITENAME_PRETTY" %} is just a way to show your app
+          to other developers and give each other honest feedback.
           You do not pay for reviews and there is no guarantee of a 4 or 5 star review.
           There is not even a guarantee you will get any reviews at all.
           Developers simply see a list of apps they 'can' leave a honest review to.
           It is up to them to review your app.
           You don't necessarily get reviews from the developers you give a review to.
           <br><br>
-          Even though we haven't heard of any developers having issues for using {% get_setting "SITENAME_PRETTY" %},
+          Even though we haven't heard of any developers having issues
+          for using {% get_setting "SITENAME_PRETTY" %},
           we cannot control how other companies such as Google and Apple enforce their rules.
           You use {% get_setting "SITENAME_PRETTY" %} at your own risk.
         </p>
@@ -41,22 +44,38 @@
         <span id="list-item-3">&nbsp;</span>
         <h4>
           Can I add my paid apps?</h4>
-        <p>Yes, you can add your paid app to the system.<br>
+        <p class="me-4">Yes, you can add your paid app to the system.<br>
             But on the app review section, 'Show free apps only' option is ON by default.<br><br>
           So if you want your app to get reviews from more people,
           you can provide a custom code for Apple
-            (<a target="_blank" href="https://help.apple.com/app-store-connect/#/dev6a098e4b1">how to</a>),
+            (<a class="text-white" target="_blank" href="https://help.apple.com/app-store-connect/#/dev6a098e4b1">how to</a>),
              or a list of promotion codes(One-time use codes) for Google
-            (<a target="_blank" href="https://support.google.com/googleplay/android-developer/answer/6321495?hl=en#zippy=%2Cstep-set-up-a-promotion-in-play-console">how to</a>)
+            (<a class="text-white" target="_blank" href="https://support.google.com/googleplay/android-developer/answer/6321495?hl=en#zippy=%2Cstep-set-up-a-promotion-in-play-console">how to</a>)
             that will let users download your app for free.
         </p>
-
+        <br><br>
         <span id="list-item-4">&nbsp;</span>
         <h4>Which markets are allowed?</h4>
-        <p>Currently we support Google Play Store and Apple App Store.
+        <p class="me-4">Currently we support Google Play Store and Apple App Store.
             You can also review apps from one store
             and use the points you earn to get reviews
             for an app on the other store.</p>
+        <br><br><br><br>
+        <span id="list-item-5">&nbsp;</span>
+        <h4>Is this the original Smooth Reviews?</h4>
+        <p class="me-4">There are two other 'smooth reviews'.
+            One is smooth.reviews reputation management site,
+            and the other one is smoothreviews.com(which is now long gone,
+            and was probably owned by
+            <a class="text-white" href="https://www.facebook.com/people/Daniel-Trend-Affiliate-Marketing-Expert/100067904132981/" rel="noindex nofollow" target="_blank">this person</a>).
+            <br>{% get_setting "SITENAME_PRETTY" %} is neither endorsed by nor affiliated with
+            these two websites.<br><br>
+            {% get_setting "SITENAME_PRETTY" %} is an instance of the
+            open-source, non-profit project <a class="text-white fw-bold" href="https://github.com/gokhanmeteerturk/smooth-review">gokhanmeteerturk/smooth-review</a>,
+            created to help indie developers get feedback
+            from other developers.
+            <br><br><br>
+        </p>
       </div>
     </div>
   </div>

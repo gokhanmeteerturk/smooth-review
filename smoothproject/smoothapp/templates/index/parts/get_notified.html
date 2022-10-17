@@ -1,0 +1,22 @@
+<form method="post" autocomplete="off">
+  <h2 class="text-white fw-light mt-4">Only A Few Days Left</h2>
+  {% csrf_token %}
+  <div class="mb-3 text-center">
+    <p class="text-start text-white ms-2 me-2">
+      Leave your email address, and we will notify you when are opening.<br><br>
+      We promise not to use this email address for anything else.
+    </p>
+    <div class="text-center">
+      <input autocomplete="false" name="hidden" type="text" style="display:none;">
+      <input type="email" name="email" class="form-control" autofocus="" autocapitalize="none" autocomplete="mail" maxlength="150" required="" id="id_email" data-scan="pc">
+      {% include "form_errors.html" with errors=form.email.errors %}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 text-center">
+      <button class="btn btn-lg btn-secondary mb-4 text-end" type="submit">GET NOTIFIED</button>
+    </div>
+  </div>
+
+
+</form>
