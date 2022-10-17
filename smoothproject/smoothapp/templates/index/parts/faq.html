@@ -1,3 +1,4 @@
+{% load custom_tags %}
 <div class="row text-start">
     <div class="col-md-4 d-none d-md-block">
       <div id="list-example" class="list-group">
@@ -14,7 +15,7 @@
         <h4>How it works?</h4>
         <p>
           You submit a review, you get a review.
-          Just log in on SmoothReviews.net with your mobile device and
+          Just log in on {% get_setting "SITENAME_PRETTY" %} with your mobile device and
           we will provide you with apps to review.
           <br><br>
           After uploading a screenshot of your review and a screenshot of the app you've reviewed,
@@ -25,16 +26,16 @@
         <span id="list-item-2">&nbsp;</span>
         <h4>Does this violate developer policies?</h4>
         <p>
-          SmoothReviews.net is just a way to show your app to other developers and give each other honest feedback.
+          {% get_setting "SITENAME_PRETTY" %} is just a way to show your app to other developers and give each other honest feedback.
           You do not pay for reviews and there is no guarantee of a 4 or 5 star review.
           There is not even a guarantee you will get any reviews at all.
           Developers simply see a list of apps they 'can' leave a honest review to.
           It is up to them to review your app.
           You don't necessarily get reviews from the developers you give a review to.
           <br><br>
-          Even though we haven't heard of any developers having issues for using smoothreviews.net,
+          Even though we haven't heard of any developers having issues for using {% get_setting "SITENAME_PRETTY" %},
           we cannot control how other companies such as Google and Apple enforce their rules.
-          You use SmoothReviews.net at your own risk.
+          You use {% get_setting "SITENAME_PRETTY" %} at your own risk.
         </p>
 <br><br>
         <span id="list-item-3">&nbsp;</span>

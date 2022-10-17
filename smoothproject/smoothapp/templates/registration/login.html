@@ -1,7 +1,8 @@
 {% extends "base_wrapper_single_row.html" %}
+{% load custom_tags %}
 {% block title %}Log In{% endblock %}
 {% block simple-content %}
-<h5 class="card-title text-center m-4 pb-4">Log In</h5>
+<h5 class="card-title text-center m-4 pb-4">{% get_setting "SITENAME_PRETTY" %} Log In</h5>
 <form method="post">
   {% csrf_token %}
   <div class="mb-3 row">
