@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 import os
 from pathlib import Path
 
+SITENAME_PRETTY = "SmoothReviews.Net"
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 from django.conf.global_settings import DEFAULT_FILE_STORAGE
 
@@ -37,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'anymail'
 ]
 
 MIDDLEWARE = [
@@ -113,15 +116,6 @@ USE_TZ = True
 
 LOGIN_REDIRECT_URL = "/"
 LOGOUT_REDIRECT_URL = "/"
-''' USE SETTINGS_LOCAL FOR THESE:
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_FILE_PATH = BASE_DIR / "sent_emails"
-EMAIL_HOST = 'email-smtp.us-east-1.amazonaws.com'
-EMAIL_PORT = 587
-EMAIL_HOST_USER = 'my_smtp_username'
-EMAIL_HOST_PASSWORD = 'my_smtp_password'
-EMAIL_USE_TLS = True
-'''
 EMAIL_FILE_PATH = BASE_DIR / "sent_emails"
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
