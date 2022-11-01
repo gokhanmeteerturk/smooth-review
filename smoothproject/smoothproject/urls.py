@@ -25,6 +25,11 @@ urlpatterns = [
 
 ]
 
+
+admin.site.site_header = 'Smooth Reviews Admin'                    # default: "Django Administration"
+admin.site.index_title = 'Features'                 # default: "Site administration"
+admin.site.site_title = 'Smooth Reviews Site Admin'
+
 if settings.DEVELOPMENT:
     urlpatterns += static(settings.STATIC_URL,
                           document_root=settings.STATIC_ROOT)

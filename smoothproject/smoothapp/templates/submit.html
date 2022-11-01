@@ -1,4 +1,5 @@
     {% extends "base.html" %}
+    {% load custom_tags %}
     {% block title %}Review - Smooth Reviews{% endblock %}
     {% block content %}
 
@@ -9,26 +10,29 @@
             <div class="login d-flex align-items-center py-5">
               <div class="container">
                 <div class="row">
-                  <div class="col-12 col-md-12  mx-auto">
+                  <div class="col-12 col-md-5  mx-auto">
+                      <h3>App Name Placeholder</h3>
+                      <div class="temp-logo-faker">
+                        <img src="https://api.lorem.space/image/{% get_random_category %}?w=300&h=300" class="img-fluid" style="border-radius:50px;" alt="App Name Placeholder">
+                      </div>
+                  </div>
+                  <div class="col-12 col-md-7  mx-auto">
 
-                    <form class="account-form p-4 rounded" action="." method="post" enctype='multipart/form-data'>
-
+                    <form class="review-submission-form p-4 rounded" action="." method="post" enctype='multipart/form-data'>
                       {% csrf_token %}
-
                       <p class="h4 mb-4 font-weight-bold">Upload image</p>
-
                       {% if form.errors %}
                       <div class="alert alert-primary" role="alert">
                         Error!
                       </div>
                       {% endif %}
-
-                      {{ form }}
-
-                      <button class="btn btn-dark btn-block py-2 mb-4 mt-5 font-weight-bold" type="submit"
-                        value="Log-in">Upload Image</button>
-
-
+                      {% for field in form %}
+                          <label class="form-label mt-4" for="{{ field.auto_id }}">{{ field.label }}</label>
+                          {{ field }}
+                          <div class="form-text">{{field.help_text}}</div>
+                      {% endfor %}
+                      <button class="{% get_class_name 'FormCss' 'big_submit' %}" type="submit"
+                        value="Submit Review">Submit Review</button>
                       <hr class="mb-3">
                       <p class="small text-center">By signing in to your account, you agree to our <a href="">Terms of
                           Service</a> and
@@ -45,7 +49,23 @@
       </div>
     </div>
 
-
+    <style>
+.temp-logo-faker {
+    display: inline-block;
+    position: relative;
+}
+.temp-logo-faker:after {
+    box-shadow: inset 0.4em 0.4em 0.4em 0 rgb(255 255 255 / 50%), inset -0.4em -0.4em 0.4em 0 rgb(0 0 0 / 30%);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    border: 0.3px solid #ddd;
+}
+    </style>
 
 
 

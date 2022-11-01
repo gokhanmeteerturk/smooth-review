@@ -1,0 +1,64 @@
+{% extends "admin/base_site.html" %}
+{% block extrahead %}
+    <style>
+:root {
+  --primary: #4cc785 !important;
+  --secondary: #f2557a !important;
+  --accent: #fff !important;
+  --header-color: var(--accent) !important;
+  --link-fg: var(--secondary);
+  --link-hover-color: #be0e37 !important;
+  }
+.dashboard .module table td a {
+    color: #7b8593;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    padding-right: 4px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 32px;
+    background-size: 22px 22px;
+    background-position: 3px center;
+    border-radius: 4px;
+    background-color: white;
+}
+.dashboard .module table td a:hover {
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25), 0 4px 4px rgba(0,0,0,0.22);
+}
+#content-main {
+    box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%);
+    overflow: hidden;
+    border-radius: 8px;
+}
+  .addlink{
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%234cc785' d='M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4V7zm-1-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z'%3E%3C/path%3E%3C/svg%3E");
+  }
+
+  .changelink, .inlinechangelink{
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23f2557a' d='M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z'%3E%3C/path%3E%3C/svg%3E");
+  color:
+  }
+
+  #branding h1{
+    font-weight: lighter!important;
+    font-size: 40px;
+    font-family: 'Roboto', sans-serif !important;
+    text-transform: lowercase;
+  }
+  .module h2, .module caption, .inline-group h2{
+    padding: 16px;
+    font-weight: lighter !important;
+    font-size: 1.2rem;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    background: #7b8593;
+  }
+  .module caption{
+    font-size: 1rem;
+  }
+  #nav-sidebar .current-app .section:link, #nav-sidebar .current-app .section:visited{
+    font-weight:normal;
+    font-size:1rem;
+  }
+    </style>
+{% endblock %}
