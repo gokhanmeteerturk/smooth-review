@@ -13,18 +13,34 @@ def user_directory_path(instance, filename):
 
 
 class ReviewSubmission(models.Model):
-    description = models.CharField(max_length=250, null=True, blank=True)
-    screenshot_app = models.ImageField(upload_to=user_directory_path, null=True, blank=False)
-    screenshot_review = models.ImageField(upload_to=user_directory_path, null=True, blank=False)
-    date_sent = models.DateTimeField(default=timezone.now, null=False, blank=True)
+
+    description = models.CharField(max_length=250,
+                                   null=True,
+                                   blank=True)
+
+    screenshot_app = models.ImageField(upload_to=user_directory_path,
+                                       null=True,
+                                       blank=False)
+
+    screenshot_review = models.ImageField(upload_to=user_directory_path,
+                                          null=True,
+                                          blank=False)
+
+    date_sent = models.DateTimeField(default=timezone.now,
+                                     null=False,
+                                     blank=True)
 
     def __str__(self):
         return "image " + str(self.pk)
 
 
 class WaitListRecord(models.Model):
-    email = models.EmailField(null=False, blank=False, unique=True)
-    date_sent = models.DateTimeField(default=timezone.now, null=False, blank=True)
+    email = models.EmailField(null=False,
+                              blank=False,
+                              unique=True)
+    date_sent = models.DateTimeField(default=timezone.now,
+                                     null=False,
+                                     blank=True)
 
     def __str__(self):
         return self.email
